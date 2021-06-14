@@ -10,9 +10,6 @@ $(function(){
                     setMenuPositioning();
                     setMainMenuNavigation($(this).data('selected'));
                     break;
-                case 'residences':
-                    loadResidences();
-                    break;
                 case 'inscription':
                     setGoToInformations();
                     setInscriptionForm();
@@ -24,6 +21,9 @@ $(function(){
             }
         });
     });
+
+    // Force to load residences content
+    loadResidences();
 });
 
 let setMenuPositioning = function(selected){
