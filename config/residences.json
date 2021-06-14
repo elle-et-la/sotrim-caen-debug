@@ -1,0 +1,27 @@
+
+[
+  {
+    "id": "1",
+    "folderImg": "Alix-Caen",
+    "name": "Alix - Caen",
+    "thumbnail": "Pers_Alix@2x.png",
+    "closer": "arrow-back-alix.svg",
+    "template": "residences/residence-alix-caen",
+    "active": true
+  },
+  {
+    "id": "2",
+    "folderImg": "DesDames-Caen",
+    "name": "Des Dames - Caen",
+    "thumbnail": "Pers_des_dames_01@2x.png",
+    "closer": "arrow-back-residence-des-dames.svg",
+    "template": "residences/residence-des-dames-caen",
+    "active": true
+  },
+  {
+    "id": "3",
+    "folderImg": "3",
+    "thumbnail": "pers_des_dames_02@2x.png",
+    "active": false
+  }
+]

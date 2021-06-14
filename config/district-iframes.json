@@ -1,0 +1,18 @@
+
+[
+  {
+    "name": "Plan de situation",
+    "type": "image",
+    "url": "./assets/img/home/plan-situation@2x.png"
+  },
+  {
+    "name": "Plans de masse",
+    "type": "image",
+    "url": "./assets/img/home/plan-masse@2x.png"
+  },
+  {
+    "name": "Vue aérienne",
+    "type": "iframe",
+    "url": "https://axeon.fr/CLIENT/LES_COTEAUX_DE_LABBAYE/Caen/HOME/index.html"
+  }
+]
