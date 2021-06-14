@@ -1,0 +1,91 @@
+.main-header{
+    position: fixed;
+    top: -70px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 40px;
+    background-color: #337754;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+.main-header.active{
+    top: 0;
+}
+
+.main-header .responsive-menu{
+    display: none;
+}
+
+.main-header .logo{
+    position: relative;
+    align-self: flex-start;
+    top: 15px;
+    width: 130px;
+}
+
+.main-header .logo img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.main-header .menu{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-header .menu .menu-item{
+    position: relative;
+    margin-left: 75px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 0.84px;
+    line-height: 32px;
+}
+
+.main-header .menu .menu-item:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+        transition: all 0.3s;
+}
+
+.main-header .menu .menu-item-special{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: #AEC63D;
+    background-image: url("../img/mail.png");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 17px;
+    display: none;
+    margin-left: 50px;
+    transition: all 0.3s;
+}
+
+.main-header .menu .menu-item-special:hover{
+    transform: scale(1.05);
+}
+
+body.about .main-header .menu .menu-item-special{
+    display: block;
+}
+
+.main-header .menu .menu-item.current:after,
+.main-header .menu .menu-item:hover:after{
+    width: 100%;
+    background-color: white;
+}

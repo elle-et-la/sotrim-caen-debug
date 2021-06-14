@@ -1,0 +1,305 @@
+.content-inscription{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: stretch;
+    background-color: white;
+}
+
+.content-inscription .closer{
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 12px;
+    height: 12px;
+    background-image: url("../img/cross.svg");
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+.content-inscription .closer:hover{
+    transform: scale(1.05);
+}
+
+.content-inscription .content-form{
+    width: 55%;
+    padding: 60px;
+}
+
+.content-inscription .content-form .inscription-title{
+    color: #337754;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-inscription .content-form .form-description{
+    color: #171717;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    width: 400px;
+    max-width: 100%;
+    line-height: 22px;
+}
+
+.content-inscription .content-form .inscription-form{
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.content-inscription .content-form .inscription-form .content-input .input input[type=text]::placeholder,
+.content-inscription .content-form .inscription-form .content-input .input input[type=email]::placeholder,
+.content-inscription .content-form .inscription-form .content-input .input input[type=tel]::placeholder{
+    color: #337754;
+}
+
+.content-inscription .content-form .inscription-form .content-input .input input[type=radio]{
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+}
+
+.content-inscription .content-form .inscription-form .content-input .input input[type=checkbox]{
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    width: 14px;
+    height: 14px;
+}
+
+.content-inscription .content-form .inscription-form .content-input .input select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.content-inscription .content-form .inscription-form .content-input.select::after {
+    content: "";
+    font-size: 1rem;
+    top: 45%;
+    transform: translateY(-50%) rotate(135deg);
+    right: 20px;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #337754;
+    border-right: 2px solid #337754;
+    z-index: 0;
+}
+
+.content-inscription .content-form .inscription-form .content-input .input input ~ .radio{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    border: 3px solid #8DC080;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.content-inscription .content-form .inscription-form .content-input .input input ~ .checkbox{
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    width: 14px;
+    height: 14px;
+    border: 3px solid #8DC080;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.content-inscription .content-form .inscription-form .content-input .input input:checked ~ .radio:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #8DC080;
+}
+
+.content-inscription .content-form .inscription-form .content-input .input input:checked ~ .checkbox:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 5px;
+    height: 5px;
+    background-color: #8DC080;
+}
+
+.content-inscription .content-form .inscription-form .content-input.civility{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.content-inscription .content-form .inscription-form .content-input.civility .input{
+    margin-right: 20px;
+}
+
+.content-inscription .content-form .inscription-form .content-input.civility .input input{
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.content-inscription .content-form .inscription-form .content-input.civility .input .label{
+    color: #337754;
+    font-size: 14px;
+}
+
+.content-inscription .content-form .inscription-form .content-input.personal-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content-inscription .content-form .inscription-form .content-input.personal-details .input{
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.content-inscription .content-form .inscription-form .content-input .input select,
+.content-inscription .content-form .inscription-form .content-input.personal-details .input input{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 3px;
+    border: 2px solid #337754;
+    color: #337754;
+    font-size: 14px;
+}
+
+.content-inscription .content-form .inscription-form .content-input.personal-details .input:nth-child(2n+1){
+    padding-right: 10px;
+}
+
+.content-inscription .content-form .inscription-form .content-input.personal-details .input:nth-child(2n){
+    padding-left: 10px;
+}
+
+.content-inscription .content-form .inscription-form .residence-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content-inscription .content-form .inscription-form .residence-details > div{
+    width: 50%;
+}
+
+.content-inscription .content-form .inscription-form .residence-details .project-choice:nth-child(2n+1){
+    padding-right: 10px;
+}
+
+.content-inscription .content-form .inscription-form .residence-details .project-choice:nth-child(2n){
+    padding-left: 10px;
+}
+
+.content-inscription .content-form .inscription-form .residence-details .project-choice .info{
+    font-size: 16px;
+    color: #337754;
+    margin-bottom: 15px;
+}
+
+.content-inscription .content-form .inscription-form .residence-details .project-choice .content-input{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.content-inscription .content-form .inscription-form .residence-details .project-choice .content-input .input{
+    margin-right: 20px;
+}
+
+.content-inscription .content-form .inscription-form .residence-details .project-choice .content-input .input input{
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.content-inscription .content-form .inscription-form .residence-details .project-choice .content-input .input .label{
+    font-size: 16px;
+    color: #337754;
+}
+
+.content-inscription .content-form .inscription-form .content-submit{
+    margin: 30px 0;
+}
+
+.content-inscription .content-form .inscription-form .content-submit input{
+    display: block;
+    width: 200px;
+    margin: 0 auto 15px auto;
+    background-color: #AEC63D;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.content-inscription .content-form .inscription-form .content-submit .info{
+    text-align: center;
+    color: #337754;
+    font-size: 12px;
+}
+
+.content-inscription .content-form .inscription-form .commercial-proposition .input{
+    position: relative;
+}
+
+.content-inscription .content-form .inscription-form .commercial-proposition .input input{
+    position: absolute;
+    top: 3px;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.content-inscription .content-form .inscription-form .commercial-proposition .input .label{
+    display: block;
+    padding-left: 25px;
+    color: #171717;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.content-inscription .content-form .inscription-form .commercial-proposition .input .label a{
+    color: #171717;
+    font-size: 12px;
+}
+
+.content-inscription .content-form .inscription-form .commercial-proposition .input .label a:hover{
+    text-decoration: underline;
+}
+
+.content-inscription .content-background{
+    width: 45%;
+    background-image: url("../img/coteaux-abbaye-presentation.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+}

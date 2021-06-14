@@ -1,0 +1,332 @@
+@media (max-width: 1100px) {
+
+
+    .footer{
+        padding: 20px 20px 10px 20px
+    }
+
+    .footer .content-footer{
+        padding-top: 80px;
+        justify-content: center;
+    }
+
+    .footer .content-footer .socials{
+        margin-left: -15px;
+        top: 30px;
+        bottom: unset;
+        left: 50%;
+        right: unset;
+        transform: translateX(-50%);
+    }
+
+    .footer-menu{
+        display: none;
+    }
+
+    .footer .content-footer .promotion .content-promotors,
+    .footer .content-footer .promotion .content-promotors .logo{
+        width: 100%;
+    }
+
+
+    .footer .content-footer .promotion .content-promotors .logo{
+        width: 150px;
+        margin: 0 auto 30px;
+    }
+}
+
+@media (max-width: 1010px) {
+    .section{
+        padding: 30px 20px;
+    }
+    #goto-informations{
+        display: none;
+    }
+    .homepage .presentation{
+        height: auto;
+    }
+    .homepage .presentation .content-background{
+        width: 100%;
+    }
+    .homepage .presentation .navigation{
+        display: none;
+    }
+    .homepage .presentation .entry-presentation{
+        min-height: calc(100vh - 70px);
+    }
+    .homepage .presentation .entry-presentation .entry-title{
+        text-align: center;
+        margin: 0 auto;
+        padding: 300px 40px 40px;
+        top: unset;
+        left: unset;
+        bottom: 20%;
+        transform: none;
+    }
+    .homepage .presentation .entry-presentation .entry-title .subtitle{
+        font-size: 15px;
+        color: white;
+        letter-spacing: 1px;
+    }
+    .homepage .presentation .entry-presentation .entry-title .title{
+        font-size: 40px;
+        line-height: 44px;
+    }
+    .homepage .content-video{
+        margin-bottom: 0;
+    }
+    .content-descriptions{
+        padding: 0 20px;
+    }
+    .content-descriptions .content-thumbnail-description{
+        display: block;
+    }
+    .content-descriptions .content-thumbnail-description .entry-information{
+        width: 100%;
+        margin: 30px 0;
+    }
+    .content-descriptions .content-thumbnail-description .entry-information .title{
+        text-align: center;
+    }
+    .content-descriptions .content-thumbnail-description .entry-information .information{
+        width: 100%;
+        text-align: center;
+    }
+    .content-descriptions .content-thumbnail-description .entry-thumbnail{
+        width: 100%;
+        margin: 30px 0;
+        padding: 0;
+    }
+    #district-iframes .content-menu{
+        overflow-x: auto;
+    }
+    .content-district-iframes{
+        padding: 0;
+    }
+    #district-iframes .content-iframes .content-iframe{
+        height: 100vh;
+    }
+    #district-iframes .content-iframes .content-iframe img{
+        position: absolute;
+        height: 100%;
+        max-width: none;
+        left: 50%;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+    .content-residences .section-title{
+        margin-bottom: 40px;
+    }
+    .content-inscription{
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        display: block;
+        overflow-y: scroll;
+        transition: all 0.3s;
+    }
+    .content-inscription.open{
+        top: 0;
+    }
+    .content-inscription .closer{
+        display: block;
+        z-index: 1;
+    }
+    .content-inscription .content-form{
+        width: 100%;
+        padding: 40px 20px;
+    }
+    .content-inscription .content-form .inscription-form .residence-details{
+        display: block;
+    }
+    .content-inscription .content-form .inscription-form .residence-details > div{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .content-inscription .content-form .inscription-form .residence-details .project-choice .content-input{
+        justify-content: center;
+    }
+    .residences-list{
+        display: block;
+    }
+
+    .residences-list .residence{
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .residences-list .residence .residence-thumbnail{
+        width: 100%;
+        height: 0;
+        padding-top: 52%;
+    }
+    #content-residences-modal .residence-modal .closer{
+        top: 20px;
+        left: 20px;
+    }
+    #content-residences-modal .content-residence .residence-header{
+        padding: 35px 20px;
+    }
+    #content-residences-modal .content-residence.alix-caen .content-thumbnail-description .title{
+        text-align: left;
+    }
+    #content-residences-modal .content-residence.alix-caen .content-pannels{
+        display: block;
+        margin-bottom: 0;
+    }
+    #content-residences-modal .content-residence.alix-caen .content-pannels .pannel.left,
+    #content-residences-modal .content-residence.alix-caen .content-pannels .pannel.right{
+        width: 100%;
+        padding: 30px 20px;
+    }
+    #content-residences-modal .content-residence.alix-caen .content-pannels .pannel.left .content-pannel{
+        width: 100%;
+    }
+    #content-residences-modal .content-residence.alix-caen .content-pannels .pannel.left .pannel-title{
+        text-align: center;
+    }
+    #content-residences-modal .content-residence.alix-caen .about{
+        margin-bottom: 30px;
+    }
+    #content-residences-modal .content-residence.des-dames-caen .content-thumbnail-description .title,
+    #content-residences-modal .content-residence .content-thumbnail-description .text{
+        text-align: left;
+    }
+    #content-residences-modal .content-residence .content-thumbnail-description{
+        margin-bottom: 40px;
+    }
+    #content-residences-modal .content-residence.des-dames-caen .content-pannels{
+        display: block;
+    }
+    #content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel{
+        width: 100%;
+        padding: 30px 20px;
+        height: auto;
+    }
+    #content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel .content-pannel{
+        position: relative;
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        transform: unset;
+    }
+    #content-residences-modal .content-residence.des-dames-caen .mention{
+        padding: 0 20px;
+    }
+    body.about .page-title,
+    body.about .presentation,
+    body.about .content-image{
+        padding: 0 20px;
+    }
+    body.about .content-about-promotors{
+        margin: 40px 0;
+        padding: 0 20px;
+    }
+
+    .footer .gotop{
+        right: 20px;
+    }
+
+    .main-header{
+        padding: 0 20px;
+    }
+
+    .main-header .logo{
+        z-index: 1;
+        top: 18px;
+        width: 130px;
+    }
+
+    .main-header .responsive-menu{
+        display: flex;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        justify-content: flex-end;
+        align-items: center;
+        z-index: 10;
+    }
+
+    .main-header .responsive-menu .menu-item{
+        width: 35px;
+        height: 35px;
+        margin-left: 20px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+    }
+
+    .main-header .responsive-menu .menu-item.open-menu{
+        background-image: url("../img/burger-menu.svg");
+    }
+
+    .main-header .responsive-menu .menu-item.open-menu.open{
+        background-image: url("../img/burger-menu-close.svg");
+    }
+
+    .main-header .responsive-menu .menu-item.mail.active{
+        display: block;
+    }
+
+    .main-header .responsive-menu .menu-item.mail{
+        background-color: #AEC63D;
+        background-image: url("../img/mail.png");
+        border-radius: 100%;
+        background-size: 18px;
+        display: none;
+    }
+
+    .main-header .menu{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 100%;
+        left: 0;
+        padding: 0;
+        background-color: #337754;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+    }
+
+    .main-header .menu.open{
+        top: 0;
+    }
+
+    .main-header .menu .menu-item{
+        margin: 15px 0;
+        font-size: 25px;
+    }
+    .main-header .menu .menu-item:after{
+        display: none;
+    }
+    body.about .main-header .menu .menu-item-special{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .homepage .content-district .section-title br{
+        display: block;
+    }
+    #content-residences-modal .content-residence .residence-header .main-logo{
+        position: relative;
+        right: 0;
+        left: 0;
+        top: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    #content-residences-modal .content-residence.alix-caen .content-thumbnail-description .title{
+        text-align: center;
+    }
+}

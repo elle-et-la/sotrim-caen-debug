@@ -1,0 +1,15 @@
+@font-face{
+    font-family: ITCAvantGardeGothic;
+    src: url("./fonts/ITC-avant-garde/ITCAvantGardeStd-GothicMedium.woff2") format("woff2"),
+    url("./fonts/ITC-avant-garde/ITCAvantGardeStd-GothicMedium.woff") format("woff");
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: ITCAvantGardeGothic;
+    src: url("./fonts/ITC-avant-garde/ITCAvantGardeStd-GothicDemi.woff2") format("woff2"),
+    url("./fonts/ITC-avant-garde/ITCAvantGardeStd-GothicDemi.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+}

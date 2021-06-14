@@ -1,0 +1,93 @@
+body{
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: white;
+    padding-top: 70px;
+}
+
+body.noscroll{
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+*{
+    font-family: ITCAvantGardeGothic, sans-serif;
+}
+
+strong{
+    font-weight: bold;
+}
+
+.section{
+    position: relative;
+    padding: 30px 40px;
+    margin: 0 auto;
+    overflow: inherit;
+}
+
+.section .section-title{
+    position: relative;
+    font-size: 38px;
+    font-weight: normal;
+    color: #337754;
+    margin-top: 30px;
+    margin-bottom: 46px;
+}
+
+.content-descriptions{
+    width: 1180px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.content-descriptions .content-thumbnail-description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-descriptions .content-thumbnail-description:not(:last-child){
+    margin-bottom: 70px;
+}
+
+.content-descriptions .content-thumbnail-description .entry-thumbnail{
+    flex-grow: 1;
+    width: 50%;
+    padding: 0 10px;
+}
+
+.content-descriptions .content-thumbnail-description .entry-thumbnail .thumbnail{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.content-descriptions .content-thumbnail-description .entry-thumbnail .thumbnail img{
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.content-descriptions .content-thumbnail-description .entry-information{
+    flex-grow: 1;
+    width: 50%;
+}
+
+.content-descriptions .content-thumbnail-description .entry-information .information{
+    width: calc(100% - 90px);
+    margin: 0 auto;
+}
+
+.content-descriptions .content-thumbnail-description .entry-information .title{
+    font-size: 30px;
+    color: #8dc080;
+    margin-bottom: 20px;
+    font-weight: normal;
+    line-height: 38px;
+}
+
+.content-descriptions .content-thumbnail-description .entry-information .text{
+    font-size: 16px;
+    line-height: 24px;
+    color: #38424F;
+}

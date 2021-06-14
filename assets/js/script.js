@@ -171,7 +171,7 @@ let setResidences = function(data){
         let src = "assets/img/residences/" + item.folderImg + '/' + item.thumbnail;
         thumbnailElem.css('backgroundImage', 'url("' + src + '")');
 
-        let residenceElem = $('<div class="residence"></div>');
+        let residenceElem = $('<div class="residence swiper-slide"></div>');
         residenceElem.append(thumbnailElem);
 
         if(item.active){
