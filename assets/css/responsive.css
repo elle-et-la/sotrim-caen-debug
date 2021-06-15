@@ -150,20 +150,6 @@
     .content-inscription .content-form .inscription-form .residence-details .project-choice .content-input{
         justify-content: center;
     }
-    .residences-list{
-        display: block;
-    }
-
-    .residences-list .residence{
-        margin-bottom: 30px;
-        width: 100%;
-    }
-
-    .residences-list .residence .residence-thumbnail{
-        width: 100%;
-        height: 0;
-        padding-top: 52%;
-    }
     #content-residences-modal .residence-modal .closer{
         top: 20px;
         left: 20px;

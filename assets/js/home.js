@@ -9,7 +9,6 @@ let carrouselData = {
 $(document).ready(function () {
   setHomeCarrousel();
   setDistrictIframes();
-  initCarousel();
 });
 
 let setHomeCarrousel = function () {
@@ -108,13 +107,3 @@ let showDistrictIframe = function (index) {
     }
   });
 };
-
-let initCarousel = function () {
-  console.log('initCarousel')
-  let swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 100,
-  });
-
-  console.log(swiper);
-}

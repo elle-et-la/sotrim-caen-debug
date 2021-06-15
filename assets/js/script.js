@@ -204,7 +204,37 @@ let setResidences = function(data){
             residence.modal = setResidenceModal(modalElem.clone(true), residence.item);
         }
     });
+
+    initResidenceCarousel();
 };
+
+let initResidenceCarousel = function () {
+  let options = {
+    direction: 'horizontal',
+    loop: false,
+    autoplayDisableOnInteraction: false,
+    mousewheel: {
+      enabled: true,
+    },
+    keyboard: {
+      enabled: true,
+    },
+    slidesPerView: 1.3,
+    centeredSlides: false,
+    spaceBetween: 50,
+    breakpoints: {
+      768: {
+        slidesPerView: 2.3,
+        spaceBetween: 50,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  }
+  let swiper = new Swiper(".residence-swiper", options);
+}
 
 let setResidenceModal = function(defaultModal, residence){
     let mainElem = $('#content-residences-modal');
