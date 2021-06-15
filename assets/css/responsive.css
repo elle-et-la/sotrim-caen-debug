@@ -376,3 +376,14 @@
         font-size: 20px;
     }
 }
+
+@media (max-width: 600px) {
+    .content-district-iframes .content-menu{
+        justify-content: flex-start !important;
+    }
+    .content-district-iframes .content-menu .menu-item{
+        width: 170px !important;
+        flex-shrink: 0 !important;
+        flex-grow: 1 !important;
+    }
+}
