@@ -219,9 +219,9 @@ let initResidenceCarousel = function () {
     keyboard: {
       enabled: true,
     },
-    slidesPerView: 1.3,
+    slidesPerView: 1.2,
     centeredSlides: false,
-    spaceBetween: 50,
+    spaceBetween: 20,
     breakpoints: {
       768: {
         slidesPerView: 2.3,
