@@ -1,0 +1,93 @@
+body.about .page-title{
+    margin: 50px 0 25px 0;
+    text-align: center;
+    font-size: 38px;
+    color: #337754;
+    font-weight: normal;
+}
+
+body.about .presentation{
+    width: 725px;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto 70px auto;
+    font-size: 16px;
+    line-height: 24px;
+    color: #171717;
+}
+
+body.about .content-image{
+    width: 940px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+body.about .content-image img{
+    display: block;
+    width: 100%;
+}
+
+body.about .content-about-promotors{
+    margin: 80px auto 60px auto;
+    width: 725px;
+    max-width: 100%;
+}
+
+body.about .content-about-promotors .promotor{
+    margin-bottom: 60px;
+}
+
+body.about .content-about-promotors .promotor .logo{
+    display: block;
+    width: 125px;
+    height: auto;
+    margin: 0 auto 20px auto;
+}
+
+body.about .content-about-promotors .promotor .promotor-title{
+    color: #337754;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+body.about .content-about-promotors .promotor .promotor-intro{
+    color: #171717;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+body.about .content-about-promotors .promotor .promotor-description{
+    color: #171717;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: normal;
+}
+
+body.about .content-about-promotors .promotor .promotor-description{
+    color: #171717;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: normal;
+}
+
+body.about .content-logos{
+    position: relative;
+    margin: 60px auto 60px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.about .content-logos img{
+    display: block;
+    margin: 0 10px;
+    max-height: 65px;
+}

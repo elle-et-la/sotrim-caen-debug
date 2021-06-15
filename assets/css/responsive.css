@@ -381,6 +381,12 @@
     .content-district-iframes .content-menu{
         justify-content: flex-start !important;
     }
+    .content-district-iframes .content-menu .menu-item:first-child {
+        margin-left: 20px;
+    }
+    .content-district-iframes .content-menu .menu-item:last-child {
+        margin-right: 20px;
+    }
     .content-district-iframes .content-menu .menu-item{
         width: 170px !important;
         flex-shrink: 0 !important;
