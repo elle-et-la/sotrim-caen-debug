@@ -227,7 +227,7 @@ let initResidenceCarousel = function () {
         slidesPerView: 2.3,
         spaceBetween: 50,
       },
-      1024: {
+      1011: {
         slidesPerView: 3,
         spaceBetween: 50,
       },
