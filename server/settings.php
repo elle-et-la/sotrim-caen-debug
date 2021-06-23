@@ -6,16 +6,15 @@ const SMTP_PASS = "xVqu887?";
 const SMTP_PORT = 587;
 const SMTP_ENCRYPT = 'tls';
 
-//const SEND_COPY_TO = "support@axeon.fr";
+const MAIL_RECEIVER = "sebastien.montlibert@axeon-software.com";
 const SEND_COPY_TO = null;
 
-CONST MANDATORY_FIELDS = array( //FIXME
-    "programName",
-    "name",
-    "lastName",
-    "mail",
+CONST MANDATORY_FIELDS = array(
+    "residence",
+    "firstname",
+    "lastname",
+    "email",
     "phone",
-    "CP",
-    "city",
-    "action",
+    "cp",
+    "city"
 );

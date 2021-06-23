@@ -9,13 +9,10 @@ use PHPMailer\PHPMailer\PHPMailer;
 $result = array("status" => "ok", "msg" => "");
 
 $postdata = file_get_contents("php://input");
-if (!$postdata) {
-    $postdata = $_POST;
-}
 
 if ($postdata) {
     try {
-        $data = (gettype($postdata) === "string") ? json_decode($postdata) : $postdata;
+        $data = (gettype($postdata) === "string") ? json_decode($postdata, true) : $postdata;
         if (checkDataValidity($data)) {
             $mail = new PHPMailer(true);
             $mail->SMTPDebug = 0;
@@ -30,24 +27,27 @@ if ($postdata) {
             $mail->CharSet = 'UTF-8';
 
             $mail->setFrom(SMTP_USER);
-            $mail->addAddress($data['receiver']); //TODO...
+            $mail->addAddress(MAIL_RECEIVER);
             if (SEND_COPY_TO) {
                 $mail->addCC(SEND_COPY_TO);
             }
 
             $message = "<table>";
-            $message .= addMessageContent("Programme", "programName", $data);
+            $message .= addMessageContent("Programme", "residence", $data);
             $message .= addMessageContent("Civilité", "civility", $data);
-            $message .= addMessageContent("Nom", "name", $data);
-            $message .= addMessageContent("Prénom", "lastName", $data);
-            $message .= addMessageContent("Email", "mail", $data);
+            $message .= addMessageContent("Nom", "firstname", $data);
+            $message .= addMessageContent("Prénom", "lastname", $data);
+            $message .= addMessageContent("Email", "email", $data);
             $message .= addMessageContent("Téléphone", "phone", $data);
-            $message .= addMessageContent("Adresse", "address", $data);
-            $message .= addMessageContent("Code Postal", "CP", $data);
+           // $message .= addMessageContent("Adresse", "address", $data);
+            $message .= addMessageContent("Code Postal", "cp", $data);
             $message .= addMessageContent("Ville", "city", $data);
+            
+            $message .= addMessageContent("Lot", "lot", $data);
             $message .= addMessageContent("Projet", "project", $data);
-            $message .= addMessageContent("Type recherché", "type", $data);
-            $message .= addMessageContent("Destination", "dest", $data);
+            $message .= addMessageContent("Type recherché", "surface", $data);
+
+            /*$message .= addMessageContent("Destination", "dest", $data);
             $message .= addMessageContent("Budget", "budj", $data);
             $message .= addMessageContent("Action", "action", $data);
             $message .= addMessageContent("utm_source", "utm_source", $data);
@@ -55,7 +55,7 @@ if ($postdata) {
             $message .= addMessageContent("utm_campaign", "utm_campaign", $data);
             $message .= addMessageContent("RGPD", "RGPD", $data);
             $message .= addMessageContent("Date", "date", $data);
-            $message .= addMessageContent("Commentaire", "comm", $data);
+            $message .= addMessageContent("Commentaire", "comm", $data);*/
             $message .= "</table>";
 
             //Content
@@ -72,7 +72,7 @@ if ($postdata) {
         sendError($e->getMessage());
     }
 } else {
-    sendError("FROM_EMPTY");
+    sendError("FORM_EMPTY");
 }
 
 function checkDataValidity($data)
@@ -84,9 +84,9 @@ function checkDataValidity($data)
         }
     }
     if (!$isValid) {
-        sendError("FORM_NOT_COMPLETE");
+        sendError("FORM_NOT_COMPLETE " . json_encode($data));
     }
-    if (!filter_var($data['mail'], FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
         $isValid = false;
         sendError("EMAIL_NOT_VALID");
     }
@@ -94,7 +94,7 @@ function checkDataValidity($data)
         $isValid = false;
         sendError("PHONE_NOT_VALID");
     }
-    if (!preg_match("~^[0-9]{5}$~", $data['CP'])) {
+    if (!preg_match("~^[0-9]{5}$~", $data['cp'])) {
         $isValid = false;
         sendError("CODE_POSTAL_NOT_VALID");
     }
