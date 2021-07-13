@@ -248,7 +248,7 @@ let initResidenceCarousel = function (item) {
     loop: false,
     autoplayDisableOnInteraction: false,
     mousewheel: {
-      enabled: true,
+      enabled: false,
     },
     keyboard: {
       enabled: true,
