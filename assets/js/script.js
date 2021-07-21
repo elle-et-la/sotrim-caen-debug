@@ -83,9 +83,40 @@ let setGoToInformations = function () {
 let setInscriptionForm = function () {
   let mainElem = $('form.inscription-form');
   mainElem.unbind('submit').submit(function () {
-    console.log('ok !', $(this));
+    var submitBtn = $('.inscription-form .content-submit input');
+    submitBtn.attr('disabled', 'true');
+    var unindexed_array = $('form.inscription-form').serializeArray();
+    var indexed_array = {};
+    $.map(unindexed_array, function (n, i) {
+      indexed_array[n['name']] = n['value'];
+    });
+    indexed_array['residence'] = $('select[name=residence] option[value=' + indexed_array['residence'] + ']').html();
+    $.ajax({
+      method: "POST",
+      url: "./server/mailSender.php",
+      data: JSON.stringify(indexed_array)
+    }).then(function (data) {
+      mainElem.trigger("reset");
+      submitBtn.attr('disabled', 'false');
+      try {
+        data = JSON.parse(data);
+        if (data.status === 'ok') {
+          console.info('Mail send');
+          addSnackbar("Mail envoyé", "success");
+        } else {
+          console.error('ERROR sending form: ', data.msg);
+          //alert("Une erreur est survenue lors de l'envoi du mail");
+          addSnackbar("Une erreur est survenue lors de l'envoi du mail", "error");
+        }
+      }
+      catch (err) {
+        console.error('ERROR sending form: ', err);
+        addSnackbar("Une erreur est survenue lors de l'envoi du mail", "error");
+      }
+    });
     return false;
   });
+
 };
 
 let setResponsiveMenu = function () {
@@ -118,7 +149,7 @@ let setScrollNavigation = function () {
 
     let elem = $('[data-target="' + $(this).data('scroll') + '"]');
     if (elem.length) {
-      $('html, body').animate({scrollTop: elem.offset().top - 100}, 500);
+      $('html, body').animate({ scrollTop: elem.offset().top - 100 }, 500);
     } else {
       window.location.href = "./";
     }
@@ -131,12 +162,12 @@ let setFooterNavigation = function () {
     let test = false;
     $.each(residences, function (index, residence) {
       if (residence.modal && residence.modal.hasClass('open')) {
-        residence.modal.animate({scrollTop: 0}, 500);
+        residence.modal.animate({ scrollTop: 0 }, 500);
         test = true;
       }
     });
     if (!test) {
-      $('html').animate({scrollTop: 0}, 500);
+      $('html').animate({ scrollTop: 0 }, 500);
     }
     return false;
   });
@@ -220,7 +251,7 @@ let initResidenceCarousel = function (item) {
     loop: false,
     autoplayDisableOnInteraction: false,
     mousewheel: {
-      enabled: true,
+      enabled: false,
     },
     keyboard: {
       enabled: true,
@@ -290,7 +321,7 @@ let openResidenceModal = function (id) {
         if (!residence.modal.hasClass('open')) {
           residence.modal.scrollTop(0);
         } else {
-          residence.modal.animate({scrollTop: 0}, 500);
+          residence.modal.animate({ scrollTop: 0 }, 500);
         }
         residence.modal.addClass('open');
       } else {

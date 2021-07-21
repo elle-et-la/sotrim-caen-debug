@@ -228,6 +228,7 @@
 
 #district-iframes .content-iframes .content-iframe .iframe-item{
     display: block;
+    margin: 0 auto;
 }
 
 #district-iframes .content-iframes .content-iframe iframe{
