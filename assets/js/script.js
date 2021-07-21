@@ -102,13 +102,16 @@ let setInscriptionForm = function () {
         data = JSON.parse(data);
         if (data.status === 'ok') {
           console.info('Mail send');
+          addSnackbar("Mail envoyé", "success");
         } else {
           console.error('ERROR sending form: ', data.msg);
-          alert("Une erreur est survenue lors de l'envoi du mail");
+          //alert("Une erreur est survenue lors de l'envoi du mail");
+          addSnackbar("Une erreur est survenue lors de l'envoi du mail", "error");
         }
       }
       catch (err) {
         console.error('ERROR sending form: ', err);
+        addSnackbar("Une erreur est survenue lors de l'envoi du mail", "error");
       }
     });
     return false;
