@@ -82,15 +82,16 @@ let setGoToInformations = function () {
 
 let setInscriptionForm = function () {
   let mainElem = $('form.inscription-form');
-  mainElem.unbind('submit').submit(function () {
-    var submitBtn = $('.inscription-form .content-submit input');
+  mainElem.unbind('submit').submit(function (evt) {
+    var submitBtn = $(evt.target).find('.content-submit input');
     submitBtn.attr('disabled', 'true');
-    var unindexed_array = $('form.inscription-form').serializeArray();
+    var unindexed_array = $(evt.target).serializeArray();
     var indexed_array = {};
     $.map(unindexed_array, function (n, i) {
       indexed_array[n['name']] = n['value'];
     });
-    indexed_array['residence'] = $('select[name=residence] option[value=' + indexed_array['residence'] + ']').html();
+    indexed_array['residence'] = $(evt.target).find('select[name=residence] option[value=' + indexed_array['residence'] + ']').html();
+    console.log(indexed_array);
     $.ajax({
       method: "POST",
       url: "./server/mailSender.php",

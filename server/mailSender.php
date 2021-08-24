@@ -60,7 +60,7 @@ if ($postdata) {
 
             //Content
             $mail->isHTML(true);
-            $mail->Subject = 'Contact ' . $data['programName'];
+            $mail->Subject = 'Contact ' . $data['residence'];
             $mail->Body    = $message;
 
             $mail->send();

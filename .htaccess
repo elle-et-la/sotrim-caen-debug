@@ -5,8 +5,8 @@
 </Files>
 
 # Deny all POST requests
-<IfModule mod_rewrite.c>
-    RewriteCond %{REQUEST_METHOD} POST
-    RewriteCond %{HTTP_REFERER} !^https://www.coteaux-abbaye-caen.fr
-    RewriteRule .* - [F,L]
-</IfModule>
+#<IfModule mod_rewrite.c>
+#    RewriteCond %{REQUEST_METHOD} POST
+#    RewriteCond %{HTTP_REFERER} !^https://www.coteaux-abbaye-caen.fr
+#    RewriteRule .* - [F,L]
+#</IfModule>
