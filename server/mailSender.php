@@ -43,7 +43,7 @@ if ($postdata) {
             $message .= addMessageContent("Code Postal", "cp", $data);
             $message .= addMessageContent("Ville", "city", $data);
             
-            $message .= addMessageContent("Lot", "lot", $data);
+            //$message .= addMessageContent("Lot", "lot", $data);
             $message .= addMessageContent("Projet", "project", $data);
             $message .= addMessageContent("Type recherché", "surface", $data);
 
