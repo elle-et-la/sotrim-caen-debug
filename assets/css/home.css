@@ -1,8 +1,8 @@
-#goto-informations{
+#goto-informations {
     position: fixed;
     bottom: 0;
     right: 2px;
-    background-color: #AEC63D;
+    background-color: #aec63d;
     border-radius: 9px 9px 0 0;
     height: 63px;
     width: 215px;
@@ -13,12 +13,12 @@
     transition: all 0.3s;
 }
 
-#goto-informations.active{
+#goto-informations.active {
     visibility: visible;
     opacity: 1;
 }
 
-#goto-informations .desc{
+#goto-informations .desc {
     position: absolute;
     width: 100%;
     top: 50%;
@@ -34,24 +34,24 @@
     transition: all 0.3s;
 }
 
-#goto-informations:hover .desc{
+#goto-informations:hover .desc {
     background-position: calc(100% - 25px) 50%;
 }
 
-.homepage .presentation{
+.homepage .presentation {
     position: relative;
     height: calc(100vh - 70px);
     background-color: #337754;
 }
 
-.homepage .presentation .navigation{
+.homepage .presentation .navigation {
     position: absolute;
     bottom: 25px;
     left: 40px;
     display: flex;
 }
 
-.homepage .presentation .navigation .item{
+.homepage .presentation .navigation .item {
     width: 15px;
     height: 25px;
     background-image: url("../img/arrow-carrousel.svg");
@@ -63,19 +63,19 @@
     z-index: 1;
 }
 
-.homepage .presentation .navigation .item:hover{
+.homepage .presentation .navigation .item:hover {
     transform: scale(1.05);
 }
 
-.homepage .presentation .navigation .item.prev{
+.homepage .presentation .navigation .item.prev {
     transform: rotate(180deg);
 }
 
-.homepage .presentation .navigation .item:hover.prev{
+.homepage .presentation .navigation .item:hover.prev {
     transform: rotate(180deg) scale(1.05);
 }
 
-.homepage .presentation .content-background{
+.homepage .presentation .content-background {
     position: absolute;
     right: 0;
     top: 0;
@@ -90,14 +90,14 @@
     transition: background-position 0.15s ease-in-out;
 }
 
-.homepage .presentation .entry-presentation{
+.homepage .presentation .entry-presentation {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.homepage .presentation .entry-presentation .entry-title{
+.homepage .presentation .entry-presentation .entry-title {
     position: relative;
     width: 600px;
     max-width: 100%;
@@ -106,7 +106,7 @@
     transform: translateY(-50%);
 }
 
-.homepage .presentation .entry-presentation .entry-title .subtitle{
+.homepage .presentation .entry-presentation .entry-title .subtitle {
     display: block;
     text-transform: uppercase;
     font-size: 18px;
@@ -116,7 +116,7 @@
     letter-spacing: 2px;
 }
 
-.homepage .presentation .entry-presentation .entry-title .title{
+.homepage .presentation .entry-presentation .entry-title .title {
     display: block;
     font-size: 70px;
     color: white;
@@ -124,22 +124,35 @@
     line-height: 69px;
 }
 
-.homepage .content-video{
+.homepage .presentation .entry-presentation .btn-entry {
+    display: none;
+    width: 200px;
+    color: #fff;
+    background-color: #aec63d;
+    padding: 15px 20px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.homepage .content-video {
     margin-bottom: 70px;
 }
 
-.homepage .content-video .section-title{
+.homepage .content-video .section-title {
     text-align: center;
 }
 
-.homepage .content-video .entry-video{
+.homepage .content-video .entry-video {
     position: relative;
     margin: 0 auto;
     width: 880px;
     max-width: 100%;
 }
 
-.homepage .content-video .content-iframe{
+.homepage .content-video .content-iframe {
     position: relative;
     margin: 0 auto;
     width: 100%;
@@ -147,7 +160,7 @@
     padding-top: 56.25%;
 }
 
-.homepage .content-video .entry-video .content-iframe iframe{
+.homepage .content-video .entry-video .content-iframe iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -155,32 +168,32 @@
     height: 100%;
 }
 
-.homepage .content-district{
+.homepage .content-district {
     width: 100%;
     padding: 0;
 }
 
-.homepage .content-district .section-title{
+.homepage .content-district .section-title {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 60px;
     line-height: 48px;
 }
 
-.homepage .content-district .section-title br{
+.homepage .content-district .section-title br {
     display: none;
 }
 
-.content-district-iframes{
+.content-district-iframes {
     padding: 0;
 }
 
-.content-district-iframes .section-title{
+.content-district-iframes .section-title {
     text-align: center;
     margin-top: 80px;
 }
 
-#district-iframes .content-menu{
+#district-iframes .content-menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,50 +201,50 @@
     margin: 0 auto 50px auto;
 }
 
-#district-iframes .content-menu .menu-item{
+#district-iframes .content-menu .menu-item {
     padding: 15px 20px;
     font-size: 16px;
     border-radius: 9px 9px 0 0;
-    border-bottom: 2px solid #8DC080;
+    border-bottom: 2px solid #8dc080;
     transition: all 0.3s;
     cursor: pointer;
 }
 
-#district-iframes .content-menu .menu-item.active{
-    background-color: #8DC080;
+#district-iframes .content-menu .menu-item.active {
+    background-color: #8dc080;
     color: white;
 }
 
-#district-iframes .content-iframes{
+#district-iframes .content-iframes {
     position: relative;
     display: block;
     height: calc(100vh - 20%);
     overflow: hidden;
 }
 
-#district-iframes .content-iframes{
+#district-iframes .content-iframes {
     position: relative;
     display: block;
     overflow: hidden;
 }
 
-#district-iframes .content-iframes .content-iframe{
+#district-iframes .content-iframes .content-iframe {
     position: relative;
     width: 100%;
     height: 100%;
     display: none;
 }
 
-#district-iframes .content-iframes .content-iframe.active{
+#district-iframes .content-iframes .content-iframe.active {
     display: block;
 }
 
-#district-iframes .content-iframes .content-iframe .iframe-item{
+#district-iframes .content-iframes .content-iframe .iframe-item {
     display: block;
     margin: 0 auto;
 }
 
-#district-iframes .content-iframes .content-iframe iframe{
+#district-iframes .content-iframes .content-iframe iframe {
     width: 100%;
     height: 100vh;
 }

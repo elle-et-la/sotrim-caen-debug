@@ -27,7 +27,7 @@ $(function () {
 });
 
 let setMenuPositioning = function (selected) {
-  let mainElem = $('.main-header');
+  /*let mainElem = $('.main-header');
   let scrollPosition = $(window).scrollTop();
 
   $(window).scroll(function () {
@@ -42,7 +42,7 @@ let setMenuPositioning = function (selected) {
       mainElem.addClass('active');
     }
     scrollPosition = current;
-  });
+  });*/
 };
 
 let setMainMenuNavigation = function (selected) {
@@ -128,7 +128,7 @@ let setResponsiveMenu = function () {
     return false;
   });
 
-  $('.main-header .responsive-menu .menu-item.mail').click(function () {
+  $('.main-header .responsive-menu .menu-item.mail, .homepage .presentation .entry-presentation .btn-entry').click(function () {
     $('.content-inscription').addClass('open');
     return false;
   });
