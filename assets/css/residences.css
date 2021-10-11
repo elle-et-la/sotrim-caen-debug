@@ -1,16 +1,16 @@
-.content-residences{
+.content-residences {
     padding: 70px 40px;
     background-color: #337754;
 }
 
-.content-residences .section-title{
+.content-residences .section-title {
     text-align: center;
     color: white;
     margin-top: 0;
     margin-bottom: 70px;
 }
 
-.residences-list{
+.residences-list {
     max-width: 100%;
     margin: 0 auto;
     display: flex;
@@ -19,15 +19,15 @@
     align-items: flex-start;
 }
 
-.residences-list .residence{
+.residences-list .residence {
     position: relative;
     width: 300px;
     overflow: hidden;
 }
 
-.residences-list .residence .mention{
+.residences-list .residence .mention {
     color: white;
-    background-color: #8DC080;
+    background-color: #8dc080;
     font-size: 15px;
     padding: 15px 0;
     text-align: center;
@@ -39,7 +39,7 @@
     text-transform: uppercase;
 }
 
-.residences-list .residence .residence-thumbnail{
+.residences-list .residence .residence-thumbnail {
     position: relative;
     height: 250px;
     background-size: cover;
@@ -49,40 +49,40 @@
     cursor: pointer;
 }
 
-.residences-list .residence.inactive .residence-thumbnail{
+.residences-list .residence.inactive .residence-thumbnail {
     cursor: default;
     filter: blur(4px);
     margin-bottom: 0;
 }
 
-.residences-list .residence .residence-name{
+.residences-list .residence .residence-name {
     width: calc(100% - 20px);
     margin: 10px auto;
     padding-right: 45px;
     cursor: pointer;
 }
 
-.residences-list .residence .residence-name .residence-pre-title{
+.residences-list .residence .residence-name .residence-pre-title {
     font-size: 16px;
     color: white;
     font-weight: normal;
     margin-bottom: 10px;
 }
 
-.residences-list .residence .residence-name .residence-title{
+.residences-list .residence .residence-name .residence-title {
     font-size: 24px;
     color: white;
     font-weight: normal;
     margin-bottom: 10px;
 }
 
-.residences-list .residence .residence-name .residence-desc{
+.residences-list .residence .residence-name .residence-desc {
     font-size: 16px;
     color: white;
     font-weight: normal;
 }
 
-.residences-list .residence .residence-name .opener{
+.residences-list .residence .residence-name .opener {
     position: absolute;
     top: 50%;
     right: 0;
@@ -96,11 +96,11 @@
     transition: all 0.3s;
 }
 
-.residences-list .residence:hover .residence-name .opener{
+.residences-list .residence:hover .residence-name .opener {
     right: 10px;
 }
 
-#content-residences-modal .residence-modal{
+#content-residences-modal .residence-modal {
     position: fixed;
     top: 0;
     left: 100%;
@@ -111,12 +111,12 @@
     transition: all 0.3s;
 }
 
-#content-residences-modal .residence-modal.open{
+#content-residences-modal .residence-modal.open {
     left: 0;
     transition: all 0.3s;
 }
 
-#content-residences-modal .residence-modal .closer{
+#content-residences-modal .residence-modal .closer {
     position: absolute;
     top: 40px;
     left: 40px;
@@ -130,22 +130,22 @@
     z-index: 1;
 }
 
-#content-residences-modal .residence-modal .closer:hover{
+#content-residences-modal .residence-modal .closer:hover {
     transform: scale(1.05);
 }
 
-#content-residences-modal .residence-modal-body{
+#content-residences-modal .residence-modal-body {
     background-color: white;
     overflow: hidden;
 }
 
-#content-residences-modal .content-residence .residence-header{
+#content-residences-modal .content-residence .residence-header {
     position: relative;
     padding: 35px 0 75px;
 }
 
-#content-residences-modal .content-residence .residence-header .pre-logo{
-    color: #3F4E3E;
+#content-residences-modal .content-residence .residence-header .pre-logo {
+    color: #3f4e3e;
     font-size: 16px;
     padding-bottom: 10px;
     margin-bottom: 10px;
@@ -153,7 +153,7 @@
     font-weight: normal;
 }
 
-#content-residences-modal .content-residence .residence-header .pre-logo:after{
+#content-residences-modal .content-residence .residence-header .pre-logo:after {
     position: absolute;
     content: "";
     display: block;
@@ -162,91 +162,91 @@
     transform: translateX(-50%);
     width: 150px;
     height: 1px;
-    background-color: #3F4E3E;
+    background-color: #3f4e3e;
 }
 
-#content-residences-modal .content-residence .residence-header .logo{
+#content-residences-modal .content-residence .residence-header .logo {
     display: block;
     margin: 0 auto;
 }
 
-#content-residences-modal .content-residence .residence-header .main-logo{
+#content-residences-modal .content-residence .residence-header .main-logo {
     position: absolute;
     top: 40px;
     right: 30px;
 }
 
-#content-residences-modal .content-residence .content-thumbnail-description{
+#content-residences-modal .content-residence .content-thumbnail-description {
     margin-bottom: 90px;
 }
 
-#content-residences-modal .content-residence .content-thumbnail-description .text{
+#content-residences-modal .content-residence .content-thumbnail-description .text {
     color: #171717;
 }
 
-#content-residences-modal .content-residence.alix-caen .content-thumbnail-description .title{
+#content-residences-modal .content-residence.alix-caen .content-thumbnail-description .title {
     font-size: 30px;
-    color: #3F4E3E;
+    color: #3f4e3e;
     line-height: 38px;
 }
 
-#content-residences-modal .content-residence.alix-caen .content-thumbnail-description .title .subtitle{
+#content-residences-modal .content-residence.alix-caen .content-thumbnail-description .title .subtitle {
     display: block;
-    color: #DA9D79;
+    color: #da9d79;
 }
 
-#content-residences-modal .content-residence.alix-caen .content-pannels{
+#content-residences-modal .content-residence.alix-caen .content-pannels {
     display: flex;
     width: 100%;
     margin-bottom: 0;
     justify-content: stretch;
 }
 
-#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.left{
+#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.left {
     padding: 90px 0;
     width: 60%;
-    background-color: #DA9D79;
+    background-color: #da9d79;
 }
 
-#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.left .content-pannel{
+#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.left .content-pannel {
     width: 400px;
     max-width: 100%;
     margin: 0 auto;
 }
 
-#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.left .pannel-title{
+#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.left .pannel-title {
     font-weight: normal;
     font-size: 30px;
     line-height: 38px;
-    color: #3F4E3E;
+    color: #3f4e3e;
     margin-bottom: 25px;
 }
 
-#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.left .pannel-title .subtitle{
+#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.left .pannel-title .subtitle {
     display: block;
     color: white;
 }
 
-#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.left .text{
+#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.left .text {
     font-size: 16px;
     line-height: 24px;
     color: #171717;
 }
 
-#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.right{
+#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.right {
     width: 40%;
-    background-color: #3F4E3E;
+    background-color: #3f4e3e;
     padding: 90px 0;
 }
 
-#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.right .content-pannel{
+#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.right .content-pannel {
     width: 400px;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.right .pannel-title{
+#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.right .pannel-title {
     font-weight: normal;
     font-size: 30px;
     line-height: 38px;
@@ -254,25 +254,25 @@
     margin-bottom: 25px;
 }
 
-#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.right .pannel-title span{
-    color: #DA9D79;
+#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.right .pannel-title span {
+    color: #da9d79;
 }
 
-#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.right .text{
+#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.right .text {
     color: white;
     font-size: 16px;
     line-height: 24px;
     font-weight: normal;
 }
 
-#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.right .text li{
+#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.right .text li {
     position: relative;
     padding-left: 35px;
     margin-bottom: 10px;
 }
 
-#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.right .text li:before{
-    content: '';
+#content-residences-modal .content-residence.alix-caen .content-pannels .pannel.right .text li:before {
+    content: "";
     display: block;
     position: absolute;
     left: 0;
@@ -280,18 +280,18 @@
     transform: translateY(-50%);
     width: 10px;
     height: 10px;
-    background-color: #DA9D79;
+    background-color: #da9d79;
     border-radius: 100%;
 }
 
-#content-residences-modal .content-residence.alix-caen .about{
+#content-residences-modal .content-residence.alix-caen .about {
     position: relative;
     display: block;
     margin-bottom: 80px;
     padding-top: 35px;
 }
 
-#content-residences-modal .content-residence.alix-caen .quote{
+#content-residences-modal .content-residence.alix-caen .quote {
     position: absolute;
     display: block;
     margin: 0 auto;
@@ -300,15 +300,15 @@
     transform: translateX(-50%);
 }
 
-#content-residences-modal .content-residence.alix-caen .about .about-title{
+#content-residences-modal .content-residence.alix-caen .about .about-title {
     font-size: 30px;
     font-weight: normal;
-    color: #DA9D79;
+    color: #da9d79;
     margin-bottom: 25px;
     text-align: center;
 }
 
-#content-residences-modal .content-residence.alix-caen .about .text{
+#content-residences-modal .content-residence.alix-caen .about .text {
     font-size: 16px;
     line-height: 24px;
     font-weight: normal;
@@ -319,33 +319,32 @@
     text-align: center;
 }
 
-
-#content-residences-modal .content-residence.des-dames-caen .content-thumbnail-description .title{
+#content-residences-modal .content-residence.des-dames-caen .content-thumbnail-description .title {
     font-size: 20px;
-    color: #80C8C0;
+    color: #80c8c0;
     line-height: 38px;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-thumbnail-description .title .subtitle{
+#content-residences-modal .content-residence.des-dames-caen .content-thumbnail-description .title .subtitle {
     display: block;
     font-size: 30px;
     color: #171717;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels{
+#content-residences-modal .content-residence.des-dames-caen .content-pannels {
     display: flex;
     width: 100%;
     justify-content: stretch;
     flex-wrap: wrap;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel{
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel {
     position: relative;
     width: 50%;
     height: 350px;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel .content-pannel{
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel .content-pannel {
     display: block;
     position: absolute;
     top: 50%;
@@ -355,30 +354,30 @@
     max-width: 100%;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.white .pannel-title{
-    color: #80C8C0;
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.white .pannel-title {
+    color: #80c8c0;
     margin-bottom: 15px;
     font-size: 20px;
     font-weight: normal;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.white .pannel-text{
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.white .pannel-text {
     color: #171717;
     font-size: 30px;
     text-transform: uppercase;
     line-height: 41px;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-1{
-    background-color: #C3E4E8;
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-1 {
+    background-color: #c3e4e8;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-1 .content-pannel{
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-1 .content-pannel {
     padding-left: 45px;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-1 .content-pannel:before{
-    content: '';
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-1 .content-pannel:before {
+    content: "";
     display: block;
     position: absolute;
     left: 0;
@@ -391,30 +390,30 @@
     background-position: 50%;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-1 .pannel-title{
-    color: #437B74;
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-1 .pannel-title {
+    color: #437b74;
     margin-bottom: 24px;
     font-size: 24px;
     font-weight: normal;
     line-height: 30px;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-1 .pannel-text{
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-1 .pannel-text {
     color: #171717;
     font-size: 18px;
     line-height: 26px;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-2{
-    background-color: #80C8C0;
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-2 {
+    background-color: #80c8c0;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-2 .content-pannel{
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-2 .content-pannel {
     padding-left: 45px;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-2 .content-pannel:before{
-    content: '';
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-2 .content-pannel:before {
+    content: "";
     display: block;
     position: absolute;
     left: 0;
@@ -427,7 +426,7 @@
     background-position: 50%;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-2 .pannel-title{
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-2 .pannel-title {
     color: white;
     margin-bottom: 24px;
     font-size: 24px;
@@ -435,22 +434,22 @@
     line-height: 30px;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-2 .pannel-text{
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-2 .pannel-text {
     color: #171717;
     font-size: 18px;
     line-height: 26px;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-3{
-    background-color: #437B74;
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-3 {
+    background-color: #437b74;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-3 .content-pannel{
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-3 .content-pannel {
     padding-left: 45px;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-3 .content-pannel:before{
-    content: '';
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-3 .content-pannel:before {
+    content: "";
     display: block;
     position: absolute;
     left: 0;
@@ -463,21 +462,21 @@
     background-position: 50%;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-3 .pannel-title{
-    color: #80C8C0;
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-3 .pannel-title {
+    color: #80c8c0;
     margin-bottom: 24px;
     font-size: 24px;
     font-weight: normal;
     line-height: 30px;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-3 .pannel-text{
+#content-residences-modal .content-residence.des-dames-caen .content-pannels .pannel.blue-3 .pannel-text {
     color: white;
     font-size: 18px;
     line-height: 26px;
 }
 
-#content-residences-modal .content-residence.des-dames-caen .mention{
+#content-residences-modal .content-residence.des-dames-caen .mention {
     position: relative;
     width: 450px;
     max-width: 100%;
@@ -491,4 +490,25 @@
 .residence-swiper {
     width: 100%;
     max-width: 990px;
+}
+
+.realised-by {
+    width: 100%;
+    padding: 55px 0;
+    background-color: #fff;
+    text-align: center;
+}
+.realised-by.dames {
+    padding: 0 0 30px 0;
+}
+.realised-by .text {
+    margin-bottom: 15px;
+}
+.realised-by .logos .logo {
+    max-height: 65px;
+    margin-right: 10px;
+}
+.realised-by .logos .logo.logo-xl {
+    max-height: 85px;
+    margin-right: 10px;
 }

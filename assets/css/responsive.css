@@ -375,6 +375,11 @@
     .residences-list .residence .residence-name .residence-title {
         font-size: 20px;
     }
+
+    
+    .homepage .presentation .entry-presentation .btn-entry {
+        display: block;
+    }
 }
 
 @media (max-width: 600px) {
