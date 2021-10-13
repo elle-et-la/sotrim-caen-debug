@@ -27,7 +27,7 @@ $(function () {
             disableFocus: false,
             awaitOpenAnimation: false,
             awaitCloseAnimation: false,
-            debugMode: true
+            debugMode: false
           });
           // Uncomment next line to enable defaut opening modal
           MicroModal.show('modal-1');
