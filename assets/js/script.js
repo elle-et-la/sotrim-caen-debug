@@ -18,6 +18,20 @@ $(function () {
           setFooterNavigation();
           setLegals();
           break;
+        case 'starter-modal':
+          MicroModal.init({
+            openTrigger: 'data-custom-open',
+            closeTrigger: 'data-custom-close',
+            openClass: 'is-open',
+            disableScroll: true,
+            disableFocus: false,
+            awaitOpenAnimation: false,
+            awaitCloseAnimation: false,
+            debugMode: true
+          });
+          // Uncomment next line to enable defaut opening modal
+          MicroModal.show('modal-1');
+          break;
       }
     });
   });
@@ -109,8 +123,7 @@ let setInscriptionForm = function () {
           //alert("Une erreur est survenue lors de l'envoi du mail");
           addSnackbar("Une erreur est survenue lors de l'envoi du mail", "error");
         }
-      }
-      catch (err) {
+      } catch (err) {
         console.error('ERROR sending form: ', err);
         addSnackbar("Une erreur est survenue lors de l'envoi du mail", "error");
       }
@@ -150,7 +163,7 @@ let setScrollNavigation = function () {
 
     let elem = $('[data-target="' + $(this).data('scroll') + '"]');
     if (elem.length) {
-      $('html, body').animate({ scrollTop: elem.offset().top - 100 }, 500);
+      $('html, body').animate({scrollTop: elem.offset().top - 100}, 500);
     } else {
       window.location.href = "./";
     }
@@ -163,12 +176,12 @@ let setFooterNavigation = function () {
     let test = false;
     $.each(residences, function (index, residence) {
       if (residence.modal && residence.modal.hasClass('open')) {
-        residence.modal.animate({ scrollTop: 0 }, 500);
+        residence.modal.animate({scrollTop: 0}, 500);
         test = true;
       }
     });
     if (!test) {
-      $('html').animate({ scrollTop: 0 }, 500);
+      $('html').animate({scrollTop: 0}, 500);
     }
     return false;
   });
@@ -322,7 +335,7 @@ let openResidenceModal = function (id) {
         if (!residence.modal.hasClass('open')) {
           residence.modal.scrollTop(0);
         } else {
-          residence.modal.animate({ scrollTop: 0 }, 500);
+          residence.modal.animate({scrollTop: 0}, 500);
         }
         residence.modal.addClass('open');
       } else {
