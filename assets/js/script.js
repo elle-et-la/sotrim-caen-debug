@@ -18,6 +18,20 @@ $(function () {
           setFooterNavigation();
           setLegals();
           break;
+        case 'starter-modal':
+          MicroModal.init({
+            openTrigger: 'data-custom-open',
+            closeTrigger: 'data-custom-close',
+            openClass: 'is-open',
+            disableScroll: true,
+            disableFocus: false,
+            awaitOpenAnimation: false,
+            awaitCloseAnimation: false,
+            debugMode: false
+          });
+          // Uncomment next line to enable defaut opening modal
+          MicroModal.show('modal-1');
+          break;
       }
     });
   });
@@ -25,6 +39,27 @@ $(function () {
   // Force to load residences content
   loadResidences();
 });
+
+let checkIfAnchorResidenceOnURL = function () {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const residenceParam = urlParams.get('show')
+  let regex = /residence-[a-z-A-Z-_]/g;
+
+  if (residenceParam !== null && residenceParam.match(regex)) {
+    residences.forEach(residence => {
+      let regexResidenceName = /^(.*?)(?=\s-)/g;
+      let residenceName = residence.item.name.match(regexResidenceName).toString().replace(/\s+/g, '-').toLowerCase();
+      let prefixedResidenceName = "residence-" + residenceName
+      if (prefixedResidenceName === residenceParam) {
+        openResidenceModal(residence.item.id);
+      }
+    });
+
+    // openResidenceModal(residenceFound.id);
+  }
+
+}
 
 let setMenuPositioning = function (selected) {
   /*let mainElem = $('.main-header');
@@ -80,7 +115,7 @@ let setGoToInformations = function () {
   }
 };
 
-let setInscriptionForm = function () {
+let setInscriptionForm = function (setResidence = null) {
   let mainElem = $('form.inscription-form');
   mainElem.unbind('submit').submit(function (evt) {
     var submitBtn = $(evt.target).find('.content-submit input');
@@ -109,8 +144,7 @@ let setInscriptionForm = function () {
           //alert("Une erreur est survenue lors de l'envoi du mail");
           addSnackbar("Une erreur est survenue lors de l'envoi du mail", "error");
         }
-      }
-      catch (err) {
+      } catch (err) {
         console.error('ERROR sending form: ', err);
         addSnackbar("Une erreur est survenue lors de l'envoi du mail", "error");
       }
@@ -118,6 +152,10 @@ let setInscriptionForm = function () {
     return false;
   });
 
+  if (setResidence !== null && typeof parseInt(setResidence) === 'number') {
+    const activeResidenceForm = $('#content-residences-modal .residence-modal[data-id="' + setResidence + '"] form.inscription-form');
+    activeResidenceForm.find('select[name=residence]').val(setResidence);
+  }
 };
 
 let setResponsiveMenu = function () {
@@ -150,7 +188,7 @@ let setScrollNavigation = function () {
 
     let elem = $('[data-target="' + $(this).data('scroll') + '"]');
     if (elem.length) {
-      $('html, body').animate({ scrollTop: elem.offset().top - 100 }, 500);
+      $('html, body').animate({scrollTop: elem.offset().top - 100}, 500);
     } else {
       window.location.href = "./";
     }
@@ -163,12 +201,12 @@ let setFooterNavigation = function () {
     let test = false;
     $.each(residences, function (index, residence) {
       if (residence.modal && residence.modal.hasClass('open')) {
-        residence.modal.animate({ scrollTop: 0 }, 500);
+        residence.modal.animate({scrollTop: 0}, 500);
         test = true;
       }
     });
     if (!test) {
-      $('html').animate({ scrollTop: 0 }, 500);
+      $('html').animate({scrollTop: 0}, 500);
     }
     return false;
   });
@@ -189,8 +227,9 @@ let setLegals = function () {
 };
 
 let loadResidences = function () {
-  $.getJSON('./config/residences.json', function (data) {
-    setResidences(data);
+  $.getJSON('./config/residences.json', async function (data) {
+    await setResidences(data);
+    checkIfAnchorResidenceOnURL();
   });
 };
 
@@ -276,8 +315,8 @@ let initResidenceCarousel = function (item) {
 
 let setResidenceModal = function (defaultModal, residence) {
   let mainElem = $('#content-residences-modal');
-
   defaultModal.data('id', residence.id);
+  defaultModal.attr('data-id', residence.id);
   defaultModal.removeClass('default');
 
   let closerElem = defaultModal.children('[data-closer]');
@@ -297,7 +336,7 @@ let setResidenceModal = function (defaultModal, residence) {
     $(this).load(file, function () {
       switch ($(this).data('include')) {
         case 'inscription':
-          setInscriptionForm();
+          setInscriptionForm(residence.id);
           setInscriptionResponsive();
           break;
         case 'footer':
@@ -322,7 +361,7 @@ let openResidenceModal = function (id) {
         if (!residence.modal.hasClass('open')) {
           residence.modal.scrollTop(0);
         } else {
-          residence.modal.animate({ scrollTop: 0 }, 500);
+          residence.modal.animate({scrollTop: 0}, 500);
         }
         residence.modal.addClass('open');
       } else {

@@ -36,8 +36,14 @@
 }
 
 @media (min-width: 1010px) and (max-width: 1199px) {
-    .content-inscription .content-form .inscription-form .residence-details .project-choice .content-input .input{
+    .content-inscription .content-form .inscription-form .residence-details .project-choice .content-input .input {
         margin-right: 0;
+    }
+}
+
+@media (min-width: 1010px) {
+    .content-inner {
+        margin: 0 10px;
     }
 }
 
@@ -316,6 +322,10 @@
         display: none;
     }
 
+    .sm-flex-column-reverse {
+        flex-direction: column-reverse;
+    }
+
     .main-header .menu {
         position: fixed;
         width: 100vw;
@@ -353,7 +363,25 @@
     }
 }
 
+@media (min-width: 769px) {
+    .hidden-sm {
+        display: none !important;
+    }
+
+    .content-inner .columns .col-md-6 {
+        width: 50%;
+    }
+}
+
 @media (max-width: 768px) {
+
+    .has-sm-text-centered {
+        text-align: center !important;
+    }
+
+    .has-sm-text-left {
+        text-align: left !important;
+    }
 
     .homepage .content-district .section-title br {
         display: block;
@@ -376,23 +404,60 @@
         font-size: 20px;
     }
 
-    
     .homepage .presentation .entry-presentation .btn-entry {
         display: block;
+    }
+
+    #content-residences-modal .content-residence.agathe-caen #art-of-living .text {
+        column-count: 1;
+    }
+
+    #content-residences-modal .content-residence.agathe-caen #architect-sentence .panel-author {
+        padding-right: 0;
+    }
+
+    #content-residences-modal .content-residence.agathe-caen #highlights-items .panel-list,
+    #content-residences-modal .content-residence.agathe-caen #highlights-qualities .panel-list {
+        padding: 0;
+    }
+
+    #content-residences-modal .content-residence.agathe-caen .content-descriptions .content-thumbnail-description.d-flex .entry-information {
+        margin: 0;
+    }
+
+    #content-residences-modal .content-residence.agathe-caen .content-descriptions .content-thumbnail-description.d-flex .entry-thumbnail {
+        margin: 0 0 30px 0;
+    }
+
+    #content-residences-modal .content-residence.agathe-caen .content-descriptions .content-thumbnail-description .entry-information {
+        padding: 0 25px;
+    }
+
+    #content-residences-modal .content-residence.agathe-caen .content-inner {
+        padding: 50px;
+    }
+
+    #content-residences-modal .content-residence.agathe-caen #highlights-qualities,
+    #content-residences-modal .content-residence.agathe-caen #highlights-items,
+    #content-residences-modal .content-residence.agathe-caen #architect-sentence {
+        padding: 0;
     }
 }
 
 @media (max-width: 600px) {
-    .content-district-iframes .content-menu{
+    .content-district-iframes .content-menu {
         justify-content: flex-start !important;
     }
+
     .content-district-iframes .content-menu .menu-item:first-child {
         margin-left: 20px;
     }
+
     .content-district-iframes .content-menu .menu-item:last-child {
         margin-right: 20px;
     }
-    .content-district-iframes .content-menu .menu-item{
+
+    .content-district-iframes .content-menu .menu-item {
         width: 170px !important;
         flex-shrink: 0 !important;
         flex-grow: 1 !important;

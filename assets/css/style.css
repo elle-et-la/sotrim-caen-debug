@@ -40,6 +40,32 @@ strong {
     margin: 0 auto;
 }
 
+.d-flex {
+    display: flex !important;
+    flex-wrap: wrap;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.has-text-centered {
+    text-align: center;
+}
+
+.content-inner .columns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-inner .columns .col-12 {
+    width: 100%;
+}
+
 .content-descriptions .content-thumbnail-description {
     display: flex;
     justify-content: space-between;
@@ -99,6 +125,7 @@ strong {
     width: 200px;
     z-index: 999999;
 }
+
 #snackbar-container .snackbar {
     background-color: #aec63d;
     color: #fff;

@@ -487,6 +487,130 @@
     text-align: right;
 }
 
+#content-residences-modal .content-residence.agathe-caen .content-inner {
+    padding: 60px;
+}
+
+#content-residences-modal .content-residence.agathe-caen #architect-sentence .panel-sentence {
+    line-height: 24px;
+    font-size: 16px;
+    margin-top: 13px;
+}
+
+#content-residences-modal .content-residence.agathe-caen #architect-sentence .panel-content {
+    max-width: 810px;
+    margin: 0 auto;
+}
+
+#content-residences-modal .content-residence.agathe-caen #architect-sentence .panel-title {
+    font-size: 30px;
+    line-height: 38px;
+    color: #4D535C;
+    margin-bottom: 20px;
+}
+
+#content-residences-modal .content-residence.agathe-caen #architect-sentence .panel-title span {
+    color: #ffffff;
+}
+
+
+#content-residences-modal .content-residence.agathe-caen #architect-sentence .panel-author {
+    color: #ffffff;
+    text-align: right;
+    padding-right: 60px;
+    margin-top: 20px;
+}
+
+
+#content-residences-modal .content-residence.agathe-caen #highlights-qualities .panel-title {
+    font-size: 30px;
+    line-height: 38px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+#content-residences-modal .content-residence.agathe-caen #highlights-qualities .panel-title span {
+    color: #F1D7A1;
+}
+
+#content-residences-modal .content-residence.agathe-caen #highlights-items .panel-list,
+#content-residences-modal .content-residence.agathe-caen #highlights-qualities .panel-list {
+    list-style: none outside;
+    margin: 0;
+    padding: 0 50px;
+}
+
+#content-residences-modal .content-residence.agathe-caen #highlights-items .panel-list li,
+#content-residences-modal .content-residence.agathe-caen #highlights-qualities .panel-list li {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+}
+
+#content-residences-modal .content-residence.agathe-caen #highlights-qualities .panel-list li:last-child {
+    margin-bottom: 0;
+}
+
+#content-residences-modal .content-residence.agathe-caen #highlights-items .panel-list li::before,
+#content-residences-modal .content-residence.agathe-caen #highlights-qualities .panel-list li::before {
+    color: #F1D7A1;
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+
+#content-residences-modal .content-residence.agathe-caen #highlights-qualities,
+#content-residences-modal .content-residence.agathe-caen #highlights-items {
+    margin-bottom: 45px;
+}
+
+#content-residences-modal .content-residence.agathe-caen #art-of-living {
+    margin-bottom: 60px;
+    padding: 0 45px;
+}
+
+#content-residences-modal .content-residence.agathe-caen #art-of-living .title {
+    font-size: 30px;
+    line-height: 38px;
+    color: #4D535C;
+    margin-bottom: 20px;
+}
+
+#content-residences-modal .content-residence.agathe-caen #art-of-living .subtitle {
+    color: #F1D7A1;
+}
+
+#content-residences-modal .content-residence.agathe-caen #art-of-living .text {
+    column-count: 2;
+    column-gap: 140px;
+    line-height: 24px;
+}
+
+#content-residences-modal .content-residence.agathe-caen .has-bg--lightgrey {
+    background-color: #EDEDED;
+}
+
+#content-residences-modal .content-residence.agathe-caen .has-bg--gold {
+    background-color: #F1D7A1;
+}
+
+#content-residences-modal .content-residence.agathe-caen .has-bg--grey {
+    background-color: #4D535C;
+    color: #FFFFFF;
+}
+
+#content-residences-modal .content-residence.agathe-caen .content-thumbnail-description .title {
+    font-size: 30px;
+    color: #4D535C;
+    line-height: 38px;
+}
+
+#content-residences-modal .content-residence.agathe-caen .content-thumbnail-description .title span {
+    color: #F1D7A1;
+}
+
 .residence-swiper {
     width: 100%;
     max-width: 990px;
@@ -498,16 +622,20 @@
     background-color: #fff;
     text-align: center;
 }
+
 .realised-by.dames {
     padding: 0 0 30px 0;
 }
+
 .realised-by .text {
     margin-bottom: 15px;
 }
+
 .realised-by .logos .logo {
     max-height: 65px;
     margin-right: 10px;
 }
+
 .realised-by .logos .logo.logo-xl {
     max-height: 85px;
     margin-right: 10px;
