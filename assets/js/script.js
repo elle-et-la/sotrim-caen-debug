@@ -40,6 +40,27 @@ $(function () {
   loadResidences();
 });
 
+let checkIfAnchorResidenceOnURL = function () {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const residenceParam = urlParams.get('show')
+  let regex = /residence-[a-z-A-Z-_]/g;
+
+  if (residenceParam !== null && residenceParam.match(regex)) {
+    residences.forEach(residence => {
+      let regexResidenceName = /^(.*?)(?=\s-)/g;
+      let residenceName = residence.item.name.match(regexResidenceName).toString().replace(/\s+/g, '-').toLowerCase();
+      let prefixedResidenceName = "residence-" + residenceName
+      if (prefixedResidenceName === residenceParam) {
+        openResidenceModal(residence.item.id);
+      }
+    });
+
+    // openResidenceModal(residenceFound.id);
+  }
+
+}
+
 let setMenuPositioning = function (selected) {
   /*let mainElem = $('.main-header');
   let scrollPosition = $(window).scrollTop();
@@ -202,8 +223,9 @@ let setLegals = function () {
 };
 
 let loadResidences = function () {
-  $.getJSON('./config/residences.json', function (data) {
-    setResidences(data);
+  $.getJSON('./config/residences.json', async function (data) {
+    await setResidences(data);
+    checkIfAnchorResidenceOnURL();
   });
 };
 
