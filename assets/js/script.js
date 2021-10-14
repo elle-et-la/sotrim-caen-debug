@@ -115,7 +115,7 @@ let setGoToInformations = function () {
   }
 };
 
-let setInscriptionForm = function () {
+let setInscriptionForm = function (setResidence = null) {
   let mainElem = $('form.inscription-form');
   mainElem.unbind('submit').submit(function (evt) {
     var submitBtn = $(evt.target).find('.content-submit input');
@@ -152,6 +152,10 @@ let setInscriptionForm = function () {
     return false;
   });
 
+  if (setResidence !== null && typeof parseInt(setResidence) === 'number') {
+    const activeResidenceForm = $('#content-residences-modal .residence-modal[data-id="' + setResidence + '"] form.inscription-form');
+    activeResidenceForm.find('select[name=residence]').val(setResidence);
+  }
 };
 
 let setResponsiveMenu = function () {
@@ -311,8 +315,8 @@ let initResidenceCarousel = function (item) {
 
 let setResidenceModal = function (defaultModal, residence) {
   let mainElem = $('#content-residences-modal');
-
   defaultModal.data('id', residence.id);
+  defaultModal.attr('data-id', residence.id);
   defaultModal.removeClass('default');
 
   let closerElem = defaultModal.children('[data-closer]');
@@ -332,7 +336,7 @@ let setResidenceModal = function (defaultModal, residence) {
     $(this).load(file, function () {
       switch ($(this).data('include')) {
         case 'inscription':
-          setInscriptionForm();
+          setInscriptionForm(residence.id);
           setInscriptionResponsive();
           break;
         case 'footer':
