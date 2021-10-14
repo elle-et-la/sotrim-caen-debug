@@ -1,0 +1,1 @@
+# /!\ WARNING : DO NOT SHARE ./server/settings.php

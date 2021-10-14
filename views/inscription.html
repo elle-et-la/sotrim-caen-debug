@@ -4,15 +4,16 @@
     <div class="content-form">
         <h2 class="inscription-title">Demande d'information</h2>
         <p class="form-description">
-            Pour en savoir plus et découvrir en avant-premiÃ¨re notre nouveau quartier
+            Pour en savoir plus et découvrir en avant-première notre nouveau quartier
         </p>
-        <form class="inscription-form">
+        <form action="./server/mailSender.php" method="POST" class="inscription-form">
             <div class="content-input select residence">
                 <div class="input">
                     <select name="residence" required>
                         <option value="" selected disabled>Choisissez une résidence*</option>
                         <option value="1">Alix - Caen</option>
                         <option value="2">Des Dames - Caen</option>
+                        <option value="3">Agathe - Caen</option>
                     </select>
                 </div>
             </div>
@@ -52,9 +53,9 @@
                 <div class="input">
                     <input type="text" name="city" value="" placeholder="Ville*" required>
                 </div>
-                <div class="input">
+                <!--<div class="input">
                     <input type="text" name="lot" value="" placeholder="Numéro de lot">
-                </div>
+                </div>-->
             </div>
             <div class="residence-details">
                 <div class="project-choice">

@@ -76,6 +76,7 @@ let setDistrictIframes = function () {
         case "iframe":
           innerElem = $('<iframe></iframe>');
           innerElem.attr('src', iframe.url);
+          innerElem.attr('onload', 'reloadIframeKRPanoRepair()');
           break;
       }
       innerElem.addClass('iframe-item');
@@ -106,4 +107,15 @@ let showDistrictIframe = function (index) {
       item.iframeItem.removeClass('active');
     }
   });
+};
+
+let reloadIframeKRPanoRepair = function () {
+  /* Trick repair KRPano */
+  let $iframe = $("iframe.iframe-item");
+  let url = $iframe.attr('src');
+  if (url.indexOf('?reloaded') === -1) {
+    setTimeout(function () {
+      $iframe.attr('src', $iframe.attr('src') + '?reloaded=' + Date.now());
+    }, 2500);
+  }
 };
