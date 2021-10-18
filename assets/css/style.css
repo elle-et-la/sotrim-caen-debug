@@ -155,3 +155,17 @@ strong {
         transform: translateY(0);
     }
 }
+
+/* Banner Consent RGPD Cookies */
+.cc-window {
+    z-index: 2000 !important;
+}
+
+.cc-window .cc-compliance .cc-btn {
+    line-height: 20px !important;
+    padding-top: .7em !important;
+}
+
+.cc-window .cc-compliance .cc-deny {
+    border-color: #ffffff !important;
+}

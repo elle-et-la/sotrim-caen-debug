@@ -29,8 +29,7 @@ $(function () {
             awaitCloseAnimation: false,
             debugMode: false
           });
-          // Uncomment next line to enable defaut opening modal
-          MicroModal.show('modal-1');
+          checkCookieForPopinExist();
           break;
       }
     });
@@ -38,7 +37,79 @@ $(function () {
 
   // Force to load residences content
   loadResidences();
+  setUpCookies();
 });
+
+let setUpCookies = function () {
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#337754",
+        "text": "#ffffff"
+      },
+      "button": {
+        "background": "#aec63d",
+        "text": "#ffffff"
+      }
+    },
+    "type": "opt-in",
+    "content": {
+      "message": "Des cookies sont placés pour analyser les données de nos visiteurs, améliorer notre site web et afficher un contenu personnalisé.",
+      "dismiss": "Fermer",
+      "allow": "Autoriser",
+      "deny": "Refuser",
+      "link": "En savoir plus"
+    },
+    onInitialise: function (status) {
+      console.log(status)
+      if (status == cookieconsent.status.allow) loadCustomCookies();
+    },
+    onStatusChange: function (status) {
+      console.log(status)
+      if (this.hasConsented()) loadCustomCookies();
+    }
+  });
+}
+
+let loadCustomCookies = function () {
+  console.log('loadCustomCookies');
+  setCookieForPopin();
+  setupTrackingAnalytics();
+  if (!document.cookie.split('; ').find(row => row.startsWith("lastTimePopinOpened"))) {
+    setCookieForPopin()
+  }
+}
+
+let showPopin = function () {
+  MicroModal.show('modal-1')
+}
+
+let checkCookieForPopinExist = function () {
+  if (!document.cookie.split('; ').find(row => row.startsWith("lastTimePopinOpened"))) {
+    showPopin();
+  }
+}
+
+let setCookieForPopin = function () {
+  let date = new Date();
+  let days = 7;
+  let timestamp = Math.round(new Date().getTime() / 1000)
+  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+  let expires = "; expires=" + date.toUTCString();
+  document.cookie = "lastTimePopinOpened=" + timestamp + "; expires=" + expires + "; Secure; Path=/";
+
+}
+
+let setupTrackingAnalytics = function () {
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-79ZWHPR3V7');
+}
 
 let checkIfAnchorResidenceOnURL = function () {
   const queryString = window.location.search;
