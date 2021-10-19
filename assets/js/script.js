@@ -61,18 +61,15 @@ let setUpCookies = function () {
       "link": "En savoir plus"
     },
     onInitialise: function (status) {
-      console.log(status)
       if (status == cookieconsent.status.allow) loadCustomCookies();
     },
     onStatusChange: function (status) {
-      console.log(status)
       if (this.hasConsented()) loadCustomCookies();
     }
   });
 }
 
 let loadCustomCookies = function () {
-  console.log('loadCustomCookies');
   setCookieForPopin();
   setupTrackingAnalytics();
   if (!document.cookie.split('; ').find(row => row.startsWith("lastTimePopinOpened"))) {
@@ -197,7 +194,6 @@ let setInscriptionForm = function (setResidence = null) {
       indexed_array[n['name']] = n['value'];
     });
     indexed_array['residence'] = $(evt.target).find('select[name=residence] option[value=' + indexed_array['residence'] + ']').html();
-    console.log(indexed_array);
     $.ajax({
       method: "POST",
       url: "./server/mailSender.php",
