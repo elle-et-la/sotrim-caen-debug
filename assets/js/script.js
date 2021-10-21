@@ -38,6 +38,17 @@ $(function () {
   // Force to load residences content
   loadResidences();
   setUpCookies();
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    analytics_storage: 'denied'
+  });
 });
 
 let setUpCookies = function () {
@@ -104,8 +115,10 @@ let setupTrackingAnalytics = function () {
     dataLayer.push(arguments);
   }
 
-  gtag('js', new Date());
-  gtag('config', 'G-79ZWHPR3V7');
+  gtag('consent', 'update', {
+    ad_storage: 'granted',
+    analytics_storage: 'granted'
+  });
 }
 
 let checkIfAnchorResidenceOnURL = function () {
