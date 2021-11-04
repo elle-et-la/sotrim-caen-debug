@@ -217,8 +217,8 @@ let setInscriptionForm = function (setResidence = null) {
       try {
         data = JSON.parse(data);
         if (data.status === 'ok') {
-          console.info('Mail send');
           addSnackbar("Mail envoyé", "success");
+          dataLayer.push({'event': 'formInscription'});
         } else {
           console.error('ERROR sending form: ', data.msg);
           //alert("Une erreur est survenue lors de l'envoi du mail");
