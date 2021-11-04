@@ -7,7 +7,6 @@ const SMTP_PORT = 465;
 const SMTP_ENCRYPT = 'ssl';
 
 const MAIL_RECEIVER = "formulaire.Caen_ca@marketing-lab.com";
-//const MAIL_RECEIVER = "sebastien.montlibert@axeon-software.com";
 const SEND_COPY_TO = null;
 
 CONST MANDATORY_FIELDS = array(
