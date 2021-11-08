@@ -10,6 +10,7 @@
     height: 50px;
     right: 80px;
     top: -25px;
+    z-index: 300;
     border-radius: 100%;
     background-color: #8DC080;
     background-image: url("../img/up.svg");

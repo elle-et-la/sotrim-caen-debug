@@ -1,5 +1,6 @@
 .content-residences {
     padding: 70px 40px;
+    overflow: hidden;
     background-color: #337754;
 }
 

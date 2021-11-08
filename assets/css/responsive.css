@@ -190,6 +190,15 @@
         justify-content: center;
     }
 
+    #content-residences-modal .content-inscription {
+        position: relative;
+        overflow: hidden;
+    }
+
+    #content-residences-modal .content-inscription .closer {
+        display: none;
+    }
+
     #content-residences-modal .residence-modal .closer {
         top: 20px;
         left: 20px;
