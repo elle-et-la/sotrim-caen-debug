@@ -193,6 +193,7 @@
     #content-residences-modal .content-inscription {
         position: relative;
         overflow: hidden;
+        z-index: 1;
     }
 
     #content-residences-modal .content-inscription .closer {
