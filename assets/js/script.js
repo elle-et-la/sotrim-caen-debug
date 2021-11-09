@@ -444,6 +444,10 @@ let openResidenceModal = function (id) {
           residence.modal.animate({scrollTop: 0}, 500);
         }
         residence.modal.addClass('open');
+        $('#content-residences-modal .residence-modal.open .goform').click(function (e) {
+          e.preventDefault();
+          scrollToForm();
+        });
       } else {
         residence.modal.removeClass('open');
       }
@@ -453,6 +457,13 @@ let openResidenceModal = function (id) {
     }
   });
 };
+
+let scrollToForm = function () {
+  let $wrapper = $('#content-residences-modal .residence-modal.open');
+  let $wrapperBodyHeight = $('#content-residences-modal .residence-modal.open .residence-modal-body').outerHeight()
+  let $wrapperCarouselHeight = $('#content-residences-modal .residence-modal.open .residence-modal-footer .content-residences').outerHeight()
+  $wrapper.scrollTop($wrapperBodyHeight + $wrapperCarouselHeight);
+}
 
 let closeResidenceModal = function () {
   $('body').removeClass('noscroll');

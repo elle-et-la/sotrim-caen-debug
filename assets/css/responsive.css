@@ -409,6 +409,25 @@
         text-align: center;
     }
 
+
+
+    #content-residences-modal .residence-modal.open .goform {
+        display: block;
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        z-index: 300;
+        background-color: #AEC63D;
+        background-image: url(../img/mail.png);
+        border-radius: 100%;
+        background-size: 18px;
+        width: 35px;
+        height: 35px;
+        margin-left: 20px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+    }
+
     .residences-list .residence .residence-name .residence-title {
         font-size: 20px;
     }
