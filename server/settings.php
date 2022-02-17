@@ -2,7 +2,7 @@
 
 const SMTP_HOST = "SSL0.OVH.NET";
 const SMTP_USER = "noreply@coteaux-abbaye-caen.fr";
-const SMTP_PASS = "qfGrEWEIST2\$bfevy81O";
+const SMTP_PASS = 'DCAN1!gU^y#=={&pX2Q}d[vhh"Aa!C';
 const SMTP_PORT = 465;
 const SMTP_ENCRYPT = 'ssl';
 
